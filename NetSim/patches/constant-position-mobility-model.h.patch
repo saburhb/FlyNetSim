@@ -1,0 +1,10 @@
+45,46c45
+< 
+< private:
+---
+> //Sabur
+48a48,51
+> private:
+> //sabur
+> //  virtual Vector DoGetPosition (void) const;
+> //  virtual void DoSetPosition (const Vector &position);

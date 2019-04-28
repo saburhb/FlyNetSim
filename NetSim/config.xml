@@ -1,0 +1,1 @@
+<simulator><instance>1</instance><network>0</network><traffic><count>1</count><rate>3</rate><size>800</size></traffic><vehicle><uav name="0"><x>1</x><y>1</y><z>10</z></uav><uav name="1"><x>1</x><y>4</y><z>10</z></uav></vehicle></simulator>

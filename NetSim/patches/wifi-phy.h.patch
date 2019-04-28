@@ -1,0 +1,12 @@
+1271c1271
+<   void NotifyMonitorSniffRx (Ptr<const Packet> packet,
+---
+>   void NotifyMonitorSniffRx (Ptr<Packet> packet,
+1296c1296
+<   typedef void (* MonitorSnifferRxCallback)(Ptr<const Packet> packet,
+---
+>   typedef void (* MonitorSnifferRxCallback)(Ptr<Packet> packet,
+1880c1880
+<   TracedCallback<Ptr<const Packet>, uint16_t, WifiTxVector, MpduInfo, SignalNoiseDbm> m_phyMonitorSniffRxTrace;
+---
+>   TracedCallback<Ptr<Packet>, uint16_t, WifiTxVector, MpduInfo, SignalNoiseDbm> m_phyMonitorSniffRxTrace;

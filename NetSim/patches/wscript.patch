@@ -1,0 +1,46 @@
+340a341
+> 
+360a362,372
+>     # Adding for zmq
+>     conf.env['czmq'] = conf.check(mandatory=True, lib='czmq', uselib_store='CZMQ')
+>     conf.env.append_value('CXXDEFINES', 'ENABLE_CZMQ')
+>     conf.env.append_value('CCDEFINES', 'ENABLE_CZMQ')
+> 
+>     conf.report_optional_feature("CZMQ", "czmq", conf.env['ENABLE_CZMQ'], "CZMQ not found")
+>     conf.env.append_value('INCLUDES', '/usr/local/include')
+>     conf.env.append_value('LINKFLAGS', '-L/usr/local/lib')
+>     conf.env.append_value('LINKFLAGS', '-lczmq')
+>     conf.env.append_value('LINKFLAGS', '-lzmq')
+> 
+625a638,648
+>     #Adding for zmq
+>     have_czmq = conf.check_cfg(package='libczmq', args=['--cflags', '--libs'],
+>                               uselib_store='CZMQ', mandatory=True)
+>     conf.env['ENABLE_CZMQ'] = have_czmq
+>     conf.report_optional_feature("CZMQ", "czmq", conf.env['ENABLE_CZMQ'], "CZMQ not found")
+>     conf.env.append_value('CXXFLAGS', '-Wall')
+>     conf.env.append_value('INCLUDES', '/usr/local/include')
+>     conf.env.append_value('LINKFLAGS', '-L/usr/local/lib')
+>     conf.env.append_value('LINKFLAGS', '-lczmq')
+>     conf.env.append_value('LINKFLAGS', '-lzmq')
+> 
+628a652,653
+> 
+> 
+720c745,746
+<             program.env.STLIB_MARKER = '-Wl,-all_load'
+---
+>             #program.env.STLIB_MARKER = '-Wl,-all_load'
+>             program.env.STLIB_MARKER = '-Wl,-all_load,-lczmq'
+722,723c748,751
+<             program.env.STLIB_MARKER = '-Wl,-Bstatic,--whole-archive'
+<             program.env.SHLIB_MARKER = '-Wl,-Bdynamic,--no-whole-archive'
+---
+>             #program.env.STLIB_MARKER = '-Wl,-Bstatic,--whole-archive'
+>             #program.env.SHLIB_MARKER = '-Wl,-Bdynamic,--no-whole-archive'
+>             program.env.STLIB_MARKER = '-Wl,-Bstatic,--whole-archive,-lczmq'
+>             program.env.SHLIB_MARKER = '-Wl,-Bdynamic,--no-whole-archive, -lczmq'
+761a790
+>                 obj.uselib='CZMQ'
+769a799
+>                 obj.uselib='CZMQ'
