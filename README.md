@@ -68,7 +68,7 @@ For Multiple UAVs as of now, a simple positioning system with linear layout is u
 
 2. The ZMQ is using some ports which sometimes might not be free or there are sockets open on the ports. If a port is already busy, use different port if the used one can't be freed. The port numbers used in the simulator are hardcoded as the following configuration:
  
- ![alt text](https://github.com/saburhb/UavNetSim/blob/master/flynetsim_ports.jpg)
+ ![alt text](https://github.com/saburhb/FlyNetSim/blob/master/flynetsim_ports.jpg)
           
  3. If there is error for the path of "config.xml" file provide absolute path with FlyNetSim.py.
  
