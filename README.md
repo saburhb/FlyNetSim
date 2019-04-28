@@ -53,7 +53,9 @@ i) Click only once the "CONNECT" and wait until "ARM" button is active.\
 ii) Click only once the "ARM" button to arm the vehicle (with default parameters) and wait until "TAKEOFF" button becomes active.\
 iii) Click only once the "TAKEOFF" button and wait until other control buttons (UP/DOWN etc.) become active. Notice that the takeoff command takes the UAV to 10m height.\
 iv) click other control buttons for movements (UP/DOWN, FORWARD/BACKWARD, LEFT/RIGHT) as many times you need.\
-v) Click LAND button for landing.
+v) Click LAND button for landing.\
+
+If you want automated mission, you can avoid the GUI and write your own mission in FlySim/uav_pubsub.py or in FlySim/gcs_pubsub.py file.
 
 #### Multi-UAV Scenario
 For Multiple UAVs as of now, a simple positioning system with linear layout is used. It takes x-coordinate of the first UAV and places other UAVs 5 meters apart. If different layout is required, the code needs to be modified. Also, for multi-UAV scenario a single GCS gives commands to all the UAVs. The code can be extended for individual control of the vehicles.
