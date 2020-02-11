@@ -193,6 +193,8 @@ class UAV:
                     print(self.prefix + " CONTROL: Message received :" + data)
                 d_list = data.split('***')
                 self.control_msg_count += 1
+                gcs_msg_size = len(d_list)
+                print(">>>>>> LENGTH OF LIST FROM GCS: " + str(gcs_msg_size))
 
                 #Information received from the command message
                 self.last_seq = int(d_list[1])
@@ -200,9 +202,16 @@ class UAV:
                 gcs_t1_timestamp = float(d_list[2])
                 gcs_t2_timestamp = time.time()
                 command = d_list[3].split(":")
-                ns_t1_timestamp = float(d_list[4])
-                ns_t2_timestamp = float(d_list[5])
-		real_time_precision_tolerance = 0.05 
+
+                if (gcs_msg_size > 5):
+                    ns_t1_timestamp = float(d_list[4])
+                    ns_t2_timestamp = float(d_list[5])
+                else:  #for DIRECT communication bypassing ns-3
+                    ns_t1_timestamp = gcs_t2_timestamp
+                    ns_t2_timestamp = gcs_t2_timestamp
+
+	        real_time_precision_tolerance = 0.05 
+
 
 		###### Do Synchronization between flysim and netsim ###################
 		delta = (ns_t2_timestamp - ns_t1_timestamp)/1000
