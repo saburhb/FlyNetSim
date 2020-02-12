@@ -57,6 +57,13 @@ v) Click LAND button for landing.\
 
 If you want automated mission, you can avoid the GUI and write your own mission in FlySim/uav_pubsub.py or in FlySim/gcs_pubsub.py file.
 
+# EDIT:
+If pressing "CONNECT" button does not activate the "ARM", the ns-3 installation/compilation needs to be verified. To confirm, if the problem is in indeed from ns-3 and not from socket/ZMQ, you can run the script "FlyNetSim_direct_no_ns3.py" that directly connects the GCS and UAV over ZMQ sockets and bypasses the ns-3. Run it with the following command:
+```
+  $ cd FlyNetSim/
+  $ python FlyNetSim_direct_no_ns3.py -v 3
+```
+
 #### Multi-UAV Scenario
 For Multiple UAVs as of now, a simple positioning system with linear layout is used. It takes x-coordinate of the first UAV and places other UAVs 5 meters apart. If different layout is required, the code needs to be modified. Also, for multi-UAV scenario a single GCS gives commands to all the UAVs. The code can be extended for individual control of the vehicles.
 
