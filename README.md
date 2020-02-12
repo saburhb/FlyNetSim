@@ -57,7 +57,7 @@ v) Click LAND button for landing.\
 
 If you want automated mission, you can avoid the GUI and write your own mission in FlySim/uav_pubsub.py or in FlySim/gcs_pubsub.py file.
 
-# EDIT:
+### EDIT:
 If pressing "CONNECT" button does not activate the "ARM", the ns-3 installation/compilation needs to be verified. To confirm, if the problem is in indeed from ns-3 and not from socket/ZMQ, you can run the script "FlyNetSim_direct_no_ns3.py" that directly connects the GCS and UAV over ZMQ sockets and bypasses the ns-3. Run it with the following command:
 ```
   $ cd FlyNetSim/
