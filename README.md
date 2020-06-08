@@ -1,5 +1,5 @@
 # FlyNetSim (Integrated UAV-Network Simulator)
-FlyNetSim is a UAV Network Simulator created by combining ns-3 network simulator and Ardupilot based UAV simulator Software-in-the-loop (SITL) with light weight Pub/Sub based middleware. The details about the design of the simulator and some preliminary results for some use case scenarios are presented in our [paper](https://arxiv.org/pdf/1808.04967.pdf). If you find this code useful in your research, please consider citing:
+FlyNetSim is a UAV Network Simulator created by combining ns-3 network simulator and Ardupilot based UAV simulator Software-in-the-loop (SITL) with light weight Pub/Sub based middleware. The details about the design of the simulator and some preliminary results for some use case scenarios are presented in our [paper](https://arxiv.org/pdf/1808.04967.pdf). If you find this code useful in your research, please consider citing the paper. The bibtex is mentioned below:
 ```
   @inproceedings{baidya2018flynetsim,
       title={FlyNetSim: An Open Source Synchronized UAV Network Simulator based on ns-3 and Ardupilot},
