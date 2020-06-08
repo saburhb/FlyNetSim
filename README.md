@@ -41,7 +41,7 @@ If you get error for versions, install the latest available version.
 
 After successful installation, execute the simulation with the following command. It creates the end-to-end communication, a GUI as ground-control station to send commands and receive telemetry. The Ardupilot also creates indiviual console window for each UAV that shows the flight status. To run the simulator with default parameters: 
 ```
-  $ cd FlyNetSim/
+  $ cd FlyNetSim/FlySim
   $ python FlyNetSim.py
 ```
 Specific parameters can be passed for different attributes in the simulation, e.g., number of UAVs, initial position of the UAV(s), network type (WiFi or LTE), external traffic load (number of contending nodes, data rates, packet size). To check the options that can be passed, use the help command:
@@ -81,7 +81,7 @@ For Multiple UAVs as of now, a simple positioning system with linear layout is u
           
  3. If there is error for the path of "config.xml" file provide absolute path with FlyNetSim.py.
  
- 4. If the ardupilot/Tools/scripts folder does not have "install-prereqs-ubuntu.sh" , recursively update the submodules of arduplilot repository. Run the command from inside the ardupilot directory:
+ 4. If the ardupilot/Tools/environment_install folder does not have "install-prereqs-ubuntu.sh" , recursively update the submodules of arduplilot repository. Run the command from inside the ardupilot directory:
  ```
  $ git submodule update -init --recursive
  ```
