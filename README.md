@@ -1,5 +1,7 @@
 # FlyNetSim (Integrated UAV-Network Simulator)
-FlyNetSim is a UAV Network Simulator created by combining ns-3 network simulator and Ardupilot based UAV simulator Software-in-the-loop (SITL) with light weight Pub/Sub based middleware. The details about the design of the simulator and some preliminary results for some use case scenarios are presented in our [paper](https://arxiv.org/pdf/1808.04967.pdf). If you find this code useful in your research, please consider citing the paper. The bibtex is mentioned below:
+FlyNetSim is a UAV Network Simulator created by combining ns-3 network simulator and Ardupilot based UAV simulator Software-in-the-loop (SITL) with light weight Pub/Sub based middleware. The details about the design of the simulator and some preliminary results for some use case scenarios are presented in our [paper](https://arxiv.org/pdf/1808.04967.pdf). If you find this code useful in your research, please consider citing the paper: [Baidya, S., Shaikh, Z., & Levorato, M. "FlyNetSim: An open source synchronized UAV network simulator based on ns-3 and ardupilot". In Proceedings of the 21st ACM International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems (ACM MSWiM).]
+
+The bibtex is mentioned below:
 ```
   @inproceedings{baidya2018flynetsim,
       title={FlyNetSim: An Open Source Synchronized UAV Network Simulator based on ns-3 and Ardupilot},
@@ -30,7 +32,7 @@ If you get error for versions, install the latest available version.
   $ cd FlyNetSim/NetSim
   $ ./net_init.sh
 ```
-4. Go to the FlySim floder and run the initial script for downloading and configuring Ardupilot, dronekit and sitl. his script also needs to be executed only once and it may take a longer time to finish.
+4. Go to the FlySim floder and run the initial script for downloading and configuring Ardupilot, dronekit and sitl. This script also needs to be executed only once and it may take a longer time to finish.
 ```
   $ cd FlyNetSim/FlySim
   $ ./fly_init.sh
